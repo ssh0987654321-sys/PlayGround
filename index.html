@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101612">
+  <title>Velvet Table — Texas Hold’em</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Velvet Table home"><span class="brand-mark">V</span><span>VELVET <b>TABLE</b></span></a>
+      <div class="header-center"><span class="live-dot"></span> PRIVATE TABLE <span class="header-divider">/</span> TEXAS HOLD’EM</div>
+      <button class="icon-button" id="sound-toggle" aria-label="Toggle sound" title="Sound is off"><span id="sound-icon">♪</span></button>
+    </header>
+
+    <section class="table-wrap" aria-label="Poker table">
+      <div class="table-frame">
+        <div class="felt">
+          <div class="felt-grain"></div>
+          <div class="table-logo"><span>V</span><small>VELVET TABLE</small></div>
+          <div class="table-line"></div>
+          <div class="pot-display"><span class="pot-label">POT</span><strong id="pot-value">0</strong><span class="chip-icon"></span></div>
+          <div class="community-cards" id="community-cards" aria-label="Community cards"></div>
+          <div class="stage-label" id="stage-label">WAITING FOR THE DEAL</div>
+          <div class="seats" id="seats"></div>
+          <div class="hand-toast" id="hand-toast" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="game-panel">
+      <div class="game-status"><div class="status-copy"><span class="status-kicker" id="status-kicker">WELCOME TO THE TABLE</span><span class="status-message" id="status-message">Your seat is ready. Shuffle up and deal.</span></div><div class="hand-count"><span>HAND</span><b id="hand-number">01</b></div></div>
+      <div class="action-area">
+        <div class="raise-control" id="raise-control"><div class="raise-heading"><span>RAISE TO</span><strong id="raise-value">40</strong></div><input id="raise-slider" type="range" min="40" max="1000" value="40" step="10" aria-label="Raise amount"><div class="range-labels"><span>MIN RAISE</span><span id="max-label">MAX 1,000</span></div></div>
+        <div class="action-buttons" id="action-buttons"><button class="action-btn muted" id="fold-btn">Fold</button><button class="action-btn secondary" id="check-btn">Check</button><button class="action-btn primary" id="raise-btn">Raise to 40</button></div>
+        <button class="deal-button" id="deal-btn"><span class="deal-icon">♠</span><span>DEAL NEXT HAND</span><span class="deal-arrow">→</span></button>
+      </div>
+      <div class="table-footer"><span><i class="footer-dot"></i> PLAYING LOCALLY · NO ACCOUNT NEEDED</span><span>BLINDS <b>10 / 20</b></span></div>
+    </section>
+    <footer class="page-footer">A quiet game for your own company. <span>♣</span> No real money, just good cards.</footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
